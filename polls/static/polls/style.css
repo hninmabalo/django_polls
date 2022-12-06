@@ -1,7 +1,9 @@
 li a {
-    color: green;
+    color: rgb(6, 104, 147);
 }
 
 body {
+    color: rgb(6, 104, 147);
     background: white url("images/background.png") no-repeat;
+    background-color: blanchedalmond;
 }

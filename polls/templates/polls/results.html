@@ -1,4 +1,9 @@
-<h1>{{ question.question_text }}</h1>
+{% extends 'main.html'%}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+<h3>{{ question.question_text }}</h3>
 
 <ul>
 {% for choice in question.choice_set.all %}
@@ -6,4 +11,5 @@
 {% endfor %}
 </ul>
 
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<a href="{% url 'polls:detail' question.id %}" class="btn btn-primary">Vote again?</a>
+{% endblock %}
